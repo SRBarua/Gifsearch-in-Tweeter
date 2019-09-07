@@ -14,18 +14,39 @@ html {
   color: #8FBC8F;
 }
 
-#tweeter .parallax {
+.parallax {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+#tweeter_container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+#tweeter {
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 1;
+}
+
+#tweeter img {
+  width: 100vw;
+}
+
 .caption {
-  position: absolute;
-  left: 0;
-  top: 20%;
+  grid-column: 1;
+  grid-row: 1;
   width: 100%;
+  z-index: 2;
   text-align: center;
+}
+
+.caption img {
+  height: 7.5vh;
 }
 
 .ml10 {
@@ -105,14 +126,6 @@ html {
   font-size: 18px;
   font-weight: normal;
   text-align: center;
-}
-
-#bgimg-3 .parallax {
-  background-image: url("/img/bg-img7 (15).jpeg");
-  background: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .caption2 {

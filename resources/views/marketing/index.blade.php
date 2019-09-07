@@ -14,12 +14,12 @@
 
     <body>
 
-
-        <div id="tweeter" class="parallax">
-            <img class="thumbnail" src="/img/bg-imgtweeter.jpg" alt="bg-imgtweeter.jpg" >
-
+        <div id="tweeter_container">
+            <div id="tweeter">
+                <img class="thumbnail" src="/img/bg-imgtweeter.jpg" alt="bg-imgtweeter.jpg">
+            </div>
             <div class="caption">
-                <img class="logo" src="/img/twitter.png" style="height:65px" data-depth="0.8">
+                <img src="/img/twitter.png">
                 <br/>
                 <h1 class="ml10">
                     <span class="text-wrapper">
@@ -28,6 +28,7 @@
                 </h1>
             </div>
         </div>
+
 
         <section class="parallax" data-parallex="scroll" data-z-index="1">
             <div class="jumbotron" >
@@ -56,7 +57,7 @@
         <section class="parallax" data-parallex="scroll" data-z-index="1">
             <div class="jumbotron">
                 <div class="container">
-                    <h3 class="display-4">Endless Possibilities</h3>
+                    <h3 class="display-4">Unfold Endless Possibilities</h3>
                     <hr class="my-4">
                     <h4 class="subtitle">Spark,  Initiate,  Arise</h4>
                     <p class="lead">
@@ -97,17 +98,18 @@
            </div>
        </section>
 
-       <div id="bgimg-3" class="parallax">
-           
-           <div class="caption2">
-               <span class="border"> JOIN TWEETER </span>
-           </div>
+       <div id="bgimg-3">
+           <img class="thumbnail" src="/img/bg-img7 (15).jpeg" alt="bg-img7 (15).jpeg" >
        </div>
-
        <section class="parallax" data-parallex="scroll" data-z-index="1">
            <div class="jumbotron">
                <div class="container">
+                   <h3 class="display-4">Let's Be FRIENDS!</h3>
+                   <hr class="my-4">
+                   <h4 class="subtitle">Join TWEETER Today</h4>
                    <p class="lead">
+                       Le Lorem Ipsum est simplement du faux texte employé dans
+                       la composition et la mise en page avant impression. </p>
                        <a class="btn btn-primary btn-sm mr-1" href="{{ route('login') }}" role="button">LOGIN</a>
                        <a class="btn btn-primary btn-sm" href="{{ route('register') }}" role="button">Register</a>
                    </p>
@@ -116,8 +118,29 @@
       </section>
 
       <div id="bgimg-2">
-          <img class="thumbnail" src="/img/bg-img7 (8).jpg" alt="bg-img7 (8).jpg" >
+          <img class="thumbnail" src="/img/friendship.jpg" alt="friendship.jpg" >
       </div>
+
+       <section class="parallax" data-parallex="scroll" data-z-index="1">
+           <div class="jumbotron">
+               <div class="container">
+                   <p class="lead">
+                       Le Lorem Ipsum est simplement du faux texte employé dans
+                       la composition et la mise en page avant impression. Le
+                       Lorem Ipsum est le faux texte standard de l'imprimerie
+                       depuis les années 1500, quand un imprimeur anonyme
+                       assembla ensemble des morceaux de texte pour réaliser un
+                       livre spécimen de polices de texte. Il n'a pas fait que
+                       survivre cinq siècles, mais s'est aussi adapté à la
+                       bureautique informatique, sans que son contenu n'en soit modifié.
+                   </p>
+                   <hr class="my-4">
+                   <p> <span>2019-Copyright Tweeter </span> | <span> Tweeter CANADA </span> | <span> tweeter@gmail.com </span> </p>
+              </div>
+          </div>
+      </section>
+
+
 
 
 
