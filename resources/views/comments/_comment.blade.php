@@ -3,6 +3,7 @@
         <strong>{{ $comment->user->name }}</strong>
         {{ $comment->created_at->diffForhumans() }}: &nbsp;
         {{ $comment->body }}
+    <img src=" {{$comment->gif}} " alt="">    
         @if(Auth::id() == $tweet->user_id)
         <a href="/comments/{{$comment->id }}/edit">Edit</a> |
         <form action="/comments/{{ $comment->id }}" method="POST" class="d-inline">

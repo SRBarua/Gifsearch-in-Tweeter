@@ -12,8 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view ('marketing.index');
 });
+
 
 Route::middleware('auth')->group(function(){
     Route::resource('/tweets', 'TweetController');

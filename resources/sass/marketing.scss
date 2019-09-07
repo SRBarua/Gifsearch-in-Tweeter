@@ -1,0 +1,123 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, html {
+    align-content: center;
+    text-align: center;
+    height: 100%;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    color: #8FBC8F;
+}
+#tweeter .parallax{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caption{
+    position: absolute;
+    left:0;
+    top:20%;
+    width: 100%;
+    text-align: center;
+}
+.ml10 {
+    font-weight: 900;
+    font-size: 50px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.ml10 .text-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+}
+
+.ml10 .letter {
+    color: #8FBC8F;
+    display: inline-block;
+    line-height: 1em;
+    transform-origin: 0 0;
+}
+.thumbnail {
+    width: 100%;
+    height: 100%;
+}
+.jumbotron {
+    align-content: center;
+    border-radius: 0px;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    justify-content: center;
+    margin-bottom: 0px;
+    position: relative;
+    width: 100vw;
+}
+
+.parallax {
+    align-content: center;
+    width: 100%;
+    min-height: 300px;
+    background: transparent;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container {
+    width: 100%;
+    padding-right: 0px;
+    margin: auto;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    justify-content: center;
+}
+.display-4 {
+    height: 50%;
+    padding: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+.subtitle{
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+.lead {
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+}
+#bgimg-3 .parallax{
+    background-image: url("/img/bg-img7 (15).jpeg");
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.caption2 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    left:0;
+    top:10%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+.caption2 span.border {
+    background-color: #fff;
+    color: #8FBC8F;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 5px;
+}
