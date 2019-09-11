@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-sm navbar-custom py-0" style="background-color: #00FF00;">
+
+    <nav class="navbar navbar-expand-sm navbar-custom py-0">
 
         <!-- Brand -->
         <a class="navbar-brand" href="#">
@@ -43,5 +44,6 @@
                     </div>
                 </li>
             </ul>
-        </div>
-</nav>
+
+
+    </nav>

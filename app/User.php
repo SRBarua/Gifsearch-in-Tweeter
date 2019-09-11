@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    
+
 
     /**
      * The attributes that are mass assignable.
@@ -55,6 +55,6 @@ class User extends Authenticatable
     }
     public function likes()
     {
-        return $this->hasMany('App\Like');
+        return $this->belongsToMany('App\Tweet', 'likes', 'user_id', 'tweet_id');
     }
 }

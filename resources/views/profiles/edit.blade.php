@@ -1,6 +1,7 @@
 @extends('layouts.main')
 @section('content')
         <h2>Edit Profile</h2>
+        @if(Auth::id() == $profile->user_id)
             <form action="/profiles/{{ $profile->id }}" method="POST">
                 {{ method_field('PUT') }}
                 @csrf
@@ -13,4 +14,5 @@
                 <br />
                 <button type="submit">Save</button>
             </form>
+        @endif
 @endsection

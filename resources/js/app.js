@@ -23,6 +23,7 @@ window.axios = require('axios');
 //files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 Vue.component('follow-button', require('./components/FollowButton.vue').default);
+Vue.component('like-unlike', require('./components/LikeUnlike.vue').default);
 Vue.component('gif-search', require('./components/GifSearch.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\User;
+use App\Like;
+use App\Tweet;
 use App\Profile;
 
 class TweetController extends Controller
@@ -121,6 +123,17 @@ class TweetController extends Controller
         }
     }
 
+    public function isLikedByMe($id)
+    {
+        $tweet = \App\Tweet::find($id)->first();
+        if  (Like::where('user_id', Auth::id())
+                ->where('tweet_id')
+                ->exists()){
+            return 'true';
+        }
+            return 'false';
+    }
+
     public function like($id)
     {
         //check for the existing like
@@ -128,14 +141,15 @@ class TweetController extends Controller
                         ->where('tweet_id', $id)
                         ->count();
 
-        if($existing){
-            $delete = \App\like::where('user_id', Auth::id())
-                                ->where('tweet_id', $id)
-                                ->delete();
+            // if($existing){
+            //     $delete = \App\like::where('user_id', Auth::id())
+            //                         ->where('tweet_id', $id)
+            //                         ->delete();
+            //
+            //     if($delete)
+            //         return back();
+            // }
 
-            if($delete)
-                return back();
-        }
             //otherwise - add a new like
 
         $like = new \App\Like;
@@ -146,7 +160,20 @@ class TweetController extends Controller
         if($like->save()){
             return back();
         }
-
         dd('error');
     }
+
+    public function unlike($id)
+
+    {
+        $existing = \App\Like::where('user_id', Auth::id())
+                        ->where('tweet_id', $id)
+                        ->count();
+        if($existing){
+            $delete = \App\like::where('user_id', Auth::id())
+                                ->where('tweet_id', $id)
+                                ->first();
+        }
+    }
+
 }

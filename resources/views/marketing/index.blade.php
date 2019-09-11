@@ -33,7 +33,7 @@
         <section class="parallax" data-parallex="scroll" data-z-index="1">
             <div class="jumbotron" >
                 <div class="container">
-                    <h3 class="display-4">Social Adventure</h3>
+
                     <hr class="my-4">
                     <h4 class="subtitle">Think,  Explore,  Meet</h4>
                     <p class="lead">
@@ -46,18 +46,29 @@
                         survivre cinq siècles, mais s'est aussi adapté à la
                         bureautique informatique, sans que son contenu n'en soit modifié.
                     </p>
+                    <hr class="my-4">
                </div>
            </div>
        </section>
 
-       <div id="bgimg-1">
-           <img class="thumbnail" src="/img/bg-imgsocialadventure.jpg" alt="bg-imgsocialadventure.jpg" >
+       <div id="background_container">
+           <div id="bgimg-1">
+               <img class="thumbnail" src="/img/marketing11.png" alt="marketing11.png">
+           </div>
+           <div class="caption">
+               <h1 class="ml1">
+                   <span class="text-wrapper">
+                       <span class="line line1"></span>
+                       <span class="letters">Social Engagement</span>
+                       <span class="line line2"></span>
+                   </span>
+               </h1>
+           </div>
        </div>
 
         <section class="parallax" data-parallex="scroll" data-z-index="1">
             <div class="jumbotron">
                 <div class="container">
-                    <h3 class="display-4">Unfold Endless Possibilities</h3>
                     <hr class="my-4">
                     <h4 class="subtitle">Spark,  Initiate,  Arise</h4>
                     <p class="lead">
@@ -70,18 +81,29 @@
                         survivre cinq siècles, mais s'est aussi adapté à la
                         bureautique informatique, sans que son contenu n'en soit modifié.
                     </p>
+                    <hr class="my-4">
                </div>
            </div>
        </section>
 
-       <div id="bgimg-2">
-           <img class="thumbnail" src="/img/bg-engage.jpg" alt="bg-engage.jpg" >
+       <div id="background_container">
+           <div id="bgimg-2">
+               <img class="thumbnail" src="/img/marketing2.jpg" alt="marketing2.jpg" >
+           </div>
+           <div class="caption">
+               <h1 class="ml1">
+                   <span class="text-wrapper">
+                       <span class="line line1"></span>
+                       <span class="letters">Endless Possibilities Unfold</span>
+                       <span class="line line2"></span>
+                   </span>
+               </h1>
+           </div>
        </div>
 
         <section class="parallax" data-parallex="scroll" data-z-index="1">
             <div class="jumbotron">
                 <div class="container">
-                    <h3 class="display-4">Framing Social Space</h3>
                     <hr class="my-4">
                     <h4 class="subtitle">Engage,  Refresh,  Redefine</h4>
                     <p class="lead">
@@ -94,22 +116,33 @@
                         survivre cinq siècles, mais s'est aussi adapté à la
                         bureautique informatique, sans que son contenu n'en soit modifié.
                     </p>
+                    <hr class="my-4">
                </div>
            </div>
        </section>
 
-       <div id="bgimg-3">
-           <img class="thumbnail" src="/img/bg-img7 (15).jpeg" alt="bg-img7 (15).jpeg" >
+       <div id="background_container">
+           <div id="bgimg-3">
+               <img class="thumbnail" src="/img/bg-img7 (15).jpeg" alt="bg-img7 (15).jpeg">
+            </div>
+            <div class="caption">
+                <h1 class="ml1">
+                    <span class="text-wrapper">
+                        <span class="line line1"></span>
+                        <span class="letters">Framing Social Space</span>
+                        <span class="line line2"></span>
+                    </span>
+                </h1>
+            </div>
        </div>
+
        <section class="parallax" data-parallex="scroll" data-z-index="1">
            <div class="jumbotron">
                <div class="container">
-                   <h3 class="display-4">Let's Be FRIENDS!</h3>
+                   <h3 class="display-4">Join TWEETER Today</h3>
                    <hr class="my-4">
-                   <h4 class="subtitle">Join TWEETER Today</h4>
                    <p class="lead">
-                       Le Lorem Ipsum est simplement du faux texte employé dans
-                       la composition et la mise en page avant impression. </p>
+                       Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. </p>
                        <a class="btn btn-primary btn-sm mr-1" href="{{ route('login') }}" role="button">LOGIN</a>
                        <a class="btn btn-primary btn-sm" href="{{ route('register') }}" role="button">Register</a>
                    </p>
@@ -117,12 +150,24 @@
           </div>
       </section>
 
-      <div id="bgimg-2">
-          <img class="thumbnail" src="/img/friendship.jpg" alt="friendship.jpg" >
+      <div id="background_container">
+          <div id="bgimg-2">
+              <img class="thumbnail" src="/img/friendship12.jpg" alt="friendship12.jpg" >
+          </div>
+          <div class="caption">
+              <h1 class="ml1">
+                  <span class="text-wrapper">
+                      <span class="line line1"></span>
+                      <span class="letters">Let's Make FRIENDS!</span>
+                      <span class="line line2"></span>
+                  </span>
+              </h1>
+          </div>
       </div>
 
        <section class="parallax" data-parallex="scroll" data-z-index="1">
            <div class="jumbotron">
+
                <div class="container">
                    <p class="lead">
                        Le Lorem Ipsum est simplement du faux texte employé dans
@@ -182,15 +227,38 @@
                 delay: 1000
               });
 
-            var image = document.getElementsByClassName('logo');
-            new simpleParallax(image, {
-            	orientation: 'right'
-            });
-
             var image = document.getElementsByClassName('thumbnail');
             new simpleParallax(image, {
             	delay: .9,
             	transition: 'cubic-bezier(0,0,0,1)'
+            });
+
+            var textWrapper = document.querySelector('.ml1 .letters');
+            textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+            anime.timeline({loop: true})
+            .add({
+                targets: '.ml1 .letter',
+                scale: [0.3,1],
+                opacity: [0,1],
+                translateZ: 0,
+                easing: "easeOutExpo",
+                duration: 600,
+                delay: (el, i) => 70 * (i+1)
+            }).add({
+                targets: '.ml1 .line',
+                scaleX: [0,1],
+                opacity: [0.5,1],
+                easing: "easeOutExpo",
+                duration: 700,
+                offset: '-=875',
+                delay: (el, i, l) => 80 * (l - i)
+            }).add({
+                targets: '.ml1',
+                opacity: 0,
+                duration: 1000,
+                easing: "easeOutExpo",
+                delay: 1000
             });
         </script>
 

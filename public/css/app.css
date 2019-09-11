@@ -10645,7 +10645,8 @@ a.text-dark:focus {
 }
 
 .header-container {
-  background-color: orange;
+  background-color: #FFD700;
+  margin: 0px 0px;
   color: black;
 }
 
@@ -10673,7 +10674,7 @@ a.text-dark:focus {
 }
 
 .footer-container {
-  background-color: orange;
+  background-color: #FFD700;
   color: black;
   margin: 0px 0px;
   text-align: center;

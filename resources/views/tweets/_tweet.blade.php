@@ -12,9 +12,10 @@
                 </form>
              @endif
         <hr />
-            <img src="/img/like.png" height="20px">
-            <a href="/tweets/{{$tweet->id}}/like" class="btn btn-link p-0"> Like</a>
-            ({{ $tweet->likes()->count() }})
+            
+
+            <like-unlike is-liked="{{ $tweet->likedbyUser }}" :tweet-id="{{ $tweet->id }}" :count="{{ $tweet->likes()->count() }}"></like-unlike>
+
             <img src="/img/comment.png" height="20px">
             <a href="/tweets/{{$tweet->id}}/comment"> Comment</a>
             ({{ $tweet->comments()->count() }})
